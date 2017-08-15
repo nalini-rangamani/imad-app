@@ -22,11 +22,11 @@ app.get('/article1', function (req, res) {
 });
 
 app.get('/article2', function (req, res) {
-  res.send("article2 by Nalini");
+  res.sendFile(path.join(__dirname, 'ui', 'article-two2.html'));
 });
 
 app.get('/article3', function (req, res) {
-  res.send("article3 by Nalini");
+  res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
 });
 
 
