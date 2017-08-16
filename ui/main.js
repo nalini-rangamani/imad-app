@@ -1,5 +1,5 @@
 //counter of views
-var counter=0;
+
 var js_counter = document.getElementById('counter');
 
 js_counter.onclick= function() {
