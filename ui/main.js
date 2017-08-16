@@ -19,7 +19,7 @@ js_counter.onclick= function() {
     }
     
     //place the request
-    request.open('GET','http://nalini-rangamani.imad.hasura-app.io/counter',true);
+    request.open('GET','http://nalinirangamani.imad.hasura-app.io/counter',true);
     request.send(null);
   
 };
