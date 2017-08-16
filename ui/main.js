@@ -9,8 +9,11 @@ js_counter.onclick= function() {
     
  //handle response and render it on the browser
     request.onreadystatechange = function() {
+        console.log('in state change');
         if (request.readystate === XMLHttpRequest.DONE) {
+            console.log('done');
             if (request.status === 200) {
+                console.log('200');
                 var counter= request.responseText;
                 var js_count=document.getElementById('count');
                 js_count.innerHTML=counter.toString();
