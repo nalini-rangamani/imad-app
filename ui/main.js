@@ -10,7 +10,7 @@ js_counter.onclick= function() {
  //handle response and render it on the browser
     request.onreadystatechange = function() {
         console.log('in state change');
-        if (request.readystate == XMLHttpRequest.DONE) {
+        if (request.readyState === XMLHttpRequest.DONE) {
             console.log('done');
             if (request.status == 200) {
                 console.log('200');
