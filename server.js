@@ -25,6 +25,13 @@ app.get('/counter', function (req, res) {
   res.send(counter.toString());
 });
 
+var names=[];
+app.get('/submit-name',function(req,res){
+    var name1 = req.query.name;
+    names.push(name1);
+    res.send(JSON.stringify(names));
+});
+
 app.get('/article1', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 });
@@ -40,12 +47,7 @@ app.get('/ui/main.js',function(req,res){
     res.sendFile(path.join(__dirname, 'ui','main.js'));
 });
 
-var names=[];
-app.get('/submit-name',function(req,res){
-    var name1 = req.query.name;
-    names.push(name1);
-    res.send(JSON.stringify(names));
-});
+
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
