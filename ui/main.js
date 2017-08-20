@@ -45,8 +45,12 @@ js_submit.onclick= function() {
                 var names= request.responseText;
                 names=JSON.parse(names);
                 
-                var js_count=document.getElementById('count');
-                js_count.innerHTML=counter.toString();
+                var list = '';
+                for (i=0;i<names.length;i++) {
+                    list += '<li>' + list[i] + '</li>';
+                }
+                var js_ul=document.getElementById('namelist');
+                js_ul.innerHTML=list;
             }
         } 
     }
