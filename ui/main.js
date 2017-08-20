@@ -27,12 +27,13 @@ js_counter.onclick= function() {
   
 };
 
-var js_name= document.getElementById('name');
-var name=js_name.value;
+
 console.log('name is ' + name);
 var js_submit = document.getElementById('submit');
 js_submit.onclick= function() {
     //create a request object
+    var js_name= document.getElementById('name');
+var name=js_name.value;
     var request = new XMLHttpRequest();
  
     
