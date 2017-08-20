@@ -32,8 +32,7 @@ console.log('name is ' + name);
 var js_submit = document.getElementById('submit');
 js_submit.onclick= function() {
     //create a request object
-    var js_name= document.getElementById('name');
-var name=js_name.value;
+
     var request = new XMLHttpRequest();
  
     
@@ -58,6 +57,8 @@ var name=js_name.value;
     }
     
     //place the request
+        var js_name= document.getElementById('name');
+var name=js_name.value;
     console.log('just before GET name is ' + name);
     request.open('GET','http://nalinirangamani.imad.hasura-app.io/submit-name?name=' + name,true);
     request.send(null);
