@@ -27,7 +27,7 @@ app.get('/counter', function (req, res) {
 
 var names=[];
 app.get('/submit-name',function(req,res){
-    var name1 = req.params.name;
+    var name1 = req.query.name;
     names.push(name1);
     res.send(JSON.stringify(names));
 });
