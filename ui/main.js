@@ -56,7 +56,7 @@ js_submit.onclick= function() {
     }
     
     //place the request
-    request.open('GET','http://nalinirangamani.imad.hasura-app.io/submit-name/name=',true);
+    request.open('GET','http://nalinirangamani.imad.hasura-app.io/submit-name/name=' + name,true);
     request.send(null);
   
 };
